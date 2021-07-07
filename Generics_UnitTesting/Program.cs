@@ -40,6 +40,16 @@ namespace Generics_UnitTesting
             string3 = Console.ReadLine();
             Console.WriteLine("Greatest string is {0} \n", obj.LargestNumberString(string1,string2,string3));
 
+            //generics Method
+            GenericsClassForGreatestValue obj1 = new GenericsClassForGreatestValue();
+            Console.WriteLine("****GENERICS INT DATATYPE****");
+            Console.WriteLine("Greatest number is {0} \n", obj1.GenericMethodForGreatest<int>(number1, number2, number3));
+            Console.WriteLine("****GENERICS FLOAT DATATYPE****");
+            Console.WriteLine("Greatest number is {0} \n", obj1.GenericMethodForGreatest<float>(numberf1, numberf2, numberf3));
+            Console.WriteLine("****GENERICS STRING DATATYPE****");
+            Console.WriteLine("Greatest number is {0} \n", obj1.GenericMethodForGreatest<string>(string1, string2, string3));
+
+
 
 
 
