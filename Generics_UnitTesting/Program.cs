@@ -49,6 +49,10 @@ namespace Generics_UnitTesting
             Console.WriteLine("****GENERICS STRING DATATYPE****");
             Console.WriteLine("Greatest number is {0} \n", obj1.GenericMethodForGreatest<string>(string1, string2, string3));
 
+            //Generic Class
+            GenericClassModifiedwhere<string> obj2 = new GenericClassModifiedwhere<string>(string1, string2, string3);
+            Console.WriteLine("Greatest number is {0} \n", obj2.FindMaxNumber());
+
 
 
 

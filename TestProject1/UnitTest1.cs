@@ -8,6 +8,7 @@ namespace TestProject1
     {
         GreatestNum obj;
         GenericsClassForGreatestValue obj1;
+        GenericClassModifiedwhere<string> onj;
         [TestInitialize]
         public void SetUp()
         {
@@ -114,6 +115,17 @@ namespace TestProject1
             string first = "Amusement", second = "Park", third = "Cinema", expectedValue, actualValue;
             expectedValue = second;
             actualValue = obj1.GenericMethodForGreatest<string>(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        //Refactor using Generic Class
+        [TestMethod]
+        public void UseCase3_4_4()
+        {
+            string first = "Hiking", second = "Beach", third = "Park" , expectedValue,actualValue;
+            //Refactoring using generics
+            onj = new GenericClassModifiedwhere<string>(first, second, third);
+            actualValue = onj.FindMaxNumber();
+            expectedValue = third;
             Assert.AreEqual(expectedValue, actualValue);
         }
 
