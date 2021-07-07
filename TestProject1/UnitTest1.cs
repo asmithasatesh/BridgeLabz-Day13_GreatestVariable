@@ -39,8 +39,8 @@ namespace TestProject1
             actualValue = obj.LargestNumber(first, second, third);
             Assert.AreEqual(expectedValue, actualValue);
         }
-        [TestMethod]
         //USE CASE 2
+        [TestMethod]
         public void UseCase2_1()
         {
             float first = 100.1F, second = 30.4F, third = 10.6F, expectedValue, actualValue;
@@ -64,6 +64,30 @@ namespace TestProject1
             actualValue = obj.LargestNumberFloat(first, second, third);
             Assert.AreEqual(expectedValue, actualValue);
         }
-        //USE CASE 3
+        //USECASE 3
+        [TestMethod]
+        public void UseCase3_1()
+        {
+            string first = "Zoo", second = "Beach", third = "Park", expectedValue, actualValue;
+            expectedValue = first;
+            actualValue = obj.LargestNumberString(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void UseCase3_2()
+        {
+            string first = "Amusement", second = "Park", third = "Cinema", expectedValue, actualValue;
+            expectedValue = second;
+            actualValue = obj.LargestNumberString(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void UseCase3_3()
+        {
+            string first = "Hiking", second = "Beach", third = "Park", expectedValue, actualValue;
+            expectedValue = third;
+            actualValue = obj.LargestNumberString(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }

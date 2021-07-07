@@ -45,6 +45,24 @@ namespace Generics_UnitTesting
             else return default;
  
         }
+        //Method to compare which is greater in floattype
+        public string LargestNumberString(string number1, string number2, string number3)
+        {
+            if ((number1.CompareTo(number2) > 0) && (number1.CompareTo(number3) > 0))
+            {
+                return number1;
+            }
+            else if ((number2.CompareTo(number1) > 0) && (number2.CompareTo(number3) > 0))
+            {
+                return number2;
+            }
+            else if ((number3.CompareTo(number2) > 0) && (number3.CompareTo(number1) > 0))
+            {
+                return number3;
+            }
+            else return default;
+
+        }
 
     }
 }
