@@ -7,10 +7,12 @@ namespace TestProject1
     public class UnitTest1
     {
         GreatestNum obj;
+        GenericsClassForGreatestValue obj1;
         [TestInitialize]
         public void SetUp()
         {
             obj = new GreatestNum();
+            obj1 = new GenericsClassForGreatestValue();
 
         }
         //USE CASE 1
@@ -89,5 +91,31 @@ namespace TestProject1
             actualValue = obj.LargestNumberString(first, second, third);
             Assert.AreEqual(expectedValue, actualValue);
         }
+        //REFACTOR USECASE1,2,3 using Generic method
+        [TestMethod]
+        public void UseCase3_4_1()
+        {
+            int first = 100, second = 38, third = 10, actualValue, expectedValue;
+            expectedValue = first;
+            actualValue = obj1.GenericMethodForGreatest<int>(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void UseCase3_4_2()
+        {
+            float first = 10.1F, second = 300.4F, third = 10.6F, expectedValue, actualValue;
+            expectedValue = second;
+            actualValue = obj1.GenericMethodForGreatest<float>(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void UseCase3_4_3()
+        {
+            string first = "Amusement", second = "Park", third = "Cinema", expectedValue, actualValue;
+            expectedValue = second;
+            actualValue = obj1.GenericMethodForGreatest<string>(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
     }
 }
