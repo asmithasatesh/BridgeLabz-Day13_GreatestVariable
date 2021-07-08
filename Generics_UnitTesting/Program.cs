@@ -60,7 +60,6 @@ namespace Generics_UnitTesting
             ExtendGenericClass<int> obj3 = new ExtendGenericClass<int>(arrayList);
             int maxValue=obj3.MaximumValueFunction(arrayList);
             Console.WriteLine("Max value= {0} ", maxValue);
-
         }
     }
 }
