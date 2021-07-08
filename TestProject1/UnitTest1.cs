@@ -166,5 +166,18 @@ namespace TestProject1
             Assert.AreEqual(expectedValue, actualValue);
         }
 
+        //USECASE 5
+        [TestMethod]
+        public void UseCase5()
+        {
+            ExtendGenericClass<string> obj3;
+            string expectedValue;
+            string[] arrayList = { "Apple", "Mango", "Grapes" };
+            obj3 = new ExtendGenericClass<string>(arrayList);
+            expectedValue = "Mango";
+            string actualValue = obj3.MaxMethod();
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
     }
 }
